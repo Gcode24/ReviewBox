@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Review Box</title>
+  <meta name="viewport" content="width=device-width, user-scale=no, initial-scale=1.0, maximum-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" type="image/x-icon" href="logo-favicon.ico">
+  <link rel="stylesheet" href="./style.css">
+
+  <!--Main page-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+<body>
+  <!--Start of main page-->
+  <nav>
+    <ul class="menu">
+      <li class="item"><a href="#">Find</a></li>
+      <li class="item"><a href="#">Review</a></li>
+      <li class="item"><a href="#">Rate</a></li>
+      <li class="logo">
+        <a href="index.html">
+          <img class="logo-img" src="default.png" alt="">
+          Review Box
+        </a>
+      </li>
+      <!-- <li class="item button"><a href="#">Log In</a></li> -->
+      <li class="item button secondary">
+        <a href="#" data-toggle="modal" data-target="#ModalLoginForm">Sign In/Sign Up</a>
+        <div id="ModalLoginForm" class="modal fade">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title">Sign In</h1>
+              </div>
+              <div class="modal-body">
+                <form role="form" method="POST" action="">
+                  <input type="hidden" name="_token" value="">
+                  <div class="form-group">
+                    <label class="control-label">E-Mail Address</label>
+                    <div>
+                      <input type="email" class="form-control input-lg" name="email" value="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Password</label>
+                    <div>
+                      <input type="password" class="form-control input-lg" name="password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="remember"> Remember Me
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div>
+                      <button type="submit" id="f-login-btn" class="btn btn-success">Sign In</button>
+                      <a class="btn btn-link" href="">Forgot Your Password?</a>
+                    </div>
+                  </div>
+                </form>
+                <h1 class="modal-title">Sign Up</h1>
+                <form role="form" method="POST" action="">
+                  <input type="hidden" name="_token" value="">
+                  <div class="form-group">
+                    <label class="control-label">Username</label>
+                    <div>
+                      <input type="text" class="form-control input-lg" name="name" value="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">E-Mail Address</label>
+                    <div>
+                      <input type="email" class="form-control input-lg" name="email" value="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Password</label>
+                    <div>
+                      <input type="password" class="form-control input-lg" name="password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Confirm Password</label>
+                    <div>
+                      <input type="password" class="form-control input-lg" name="password_confirmation">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div>
+                      <button type="submit" id="f-signup-btn" class="btn btn-success">
+                        Sign Up
+                      </button>
+                      <p class="legal-P">By Submitting, I accept Review Box
+                        <a class="btn btn-legal" href="terms.html">
+                          Terms of Use</a>
+                        <a class="btn btn-legal" href="policy.html">
+                          Privacy Policy</a>
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modaL -->
+      </li>
+      <li class="toggle"><span class="bars"></span></li>
+    </ul>
+  </nav>
+  <hr>
+  <div class="container-fluid-2">
+    <div class="header1">
+      <h1 class="tag-line">Confidence to rent starts here.</h1>
+      <!--<h2>Lystado is the online rental marketplace for all your adventures.</h2> -->
+    </div>
+    <!--Search Bar -->
+    <div class="col-lg-7 mx-auto">
+      <form action="index.html" method="post">
+        <div class="input-group mb-4">
+          <input id="searchbox" class="form-control" type="search" placeholder="Enter an address, city, or ZIP code. . . ." aria-describedby="button-addon5">
+          <div class="input-group-append">
+            <a id="button-addon5" type="submit" class="btn btn-light" href="index.html"><i class="fa fa-search"></i></a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="header2">
+    <!--<h3>Whether you're rating, reviewing, or renting, we're the place to go.</h3> -->
+    <h3 class="home-description">Whether you're looking for a rental or writing a review, we're here to help. </h3>
+  </div>
+
+  <div class="container-fluid-4">
+    <div class="row justify-content-center">
+      <div class="col-md-3 p-2 m-2 inline-flex">
+        <a class="Optionbox" href="searchbox">
+          <img class="img-responsive" src="citydrawing.jpg" alt="city-img">
+          <h4>Look for a City</h4>
+          <p>Lorem ipsum dolor sit amet. The dummy text to
+            show what a paragraph would look like.</p>
+          <a class="Clickbtn" href="">Browse cities</a>
+        </a>
+      </div>
+      <div class="col-md-3 p-2 m-2 inline-flex">
+        <a class="Optionbox" href="">
+          <img class="img-responsive" src="mapdrawing.jpg" alt="city-img">
+          <h4>Find an Address</h4>
+          <p>Lorem ipsum dolor sit amet. The dummy text to
+            show what a paragraph would look like.</p>
+          <a class="Clickbtn" href="">Search an address</a>
+        </a>
+      </div>
+      <div class="col-md-3 p-2 m-2 inline-flex">
+        <a class="Optionbox" href="">
+          <img class="img-responsive" src="apartmentdrawing.jpg" alt="city-img">
+          <h4>Rate your Rnt</h4>
+          <p>Lorem ipsum dolor sit amet. The dummy text to
+            show what a paragraph would look like.</p>
+          <a class="Clickbtn" href="">Rate a rental</a>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews-header">
+    <h3 class="reviews-txt"> Read reviews for rentals near you or places you're moving to.</h3>
+  </div>
+  <!--End of main page-->
+  <div class="wrapper">
+    <div class="item-bg" id="card-back"></div>
+    <div class="news-slider">
+      <div class="news-slider_wrp swiper-wrapper">
+        <div class="news-slider__item swiper-slide">
+          <a href="#" class="news__item">
+            <div class="news-date">
+              <span class="news-date__title">Rental</span>
+              <span class="news-date__txt">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </span>
+            </div>
+            <div class="news__title">
+              Lorem Ipsum Dolor Sit Amet
+            </div>
+            <p class="news__txt">
+              Lorem ipsum dolor sit amet. The dummy text
+              show what a paragraph would look like.
+            </p>
+            <div class="news__img">
+              <img src="Apartment1.jpeg" alt="news">
+            </div>
+          </a>
+        </div>
+        <!--Card code start -->
+        <div class="news-slider__item swiper-slide">
+          <a href="#" class="news__item">
+            <div class="news-date">
+              <span class="news-date__title">Rental</span>
+              <span class="news-date__txt">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+              </span>
+            </div>
+            <div class="news__title">
+              Lorem Ipsum Dolor Sit Amet
+            </div>
+            <p class="news__txt">
+              Lorem ipsum dolor sit amet. The dummy text
+              show what a paragraph would look like.
+            </p>
+            <div class="news__img">
+              <img src="Apartment2.jpg" alt="news">
+            </div>
+          </a>
+        </div>
+        <div class="news-slider__item swiper-slide">
+          <a href="#" class="news__item">
+            <div class="news-date">
+              <span class="news-date__title">Rental</span>
+              <span class="news-date__txt">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </span>
+            </div>
+            <div class="news__title">
+              Lorem Ipsum Dolor Sit Amet
+            </div>
+            <p class="news__txt">
+              Lorem ipsum dolor sit amet. The dummy text
+              show what a paragraph would look like.
+            </p>
+            <div class="news__img">
+              <img src="Apartment3.jpg" alt="news">
+            </div>
+          </a>
+        </div>
+        <div class="news-slider__item swiper-slide">
+          <a href="#" class="news__item">
+            <div class="news-date">
+              <span class="news-date__title">Rental</span>
+              <span class="news-date__txt">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+              </span>
+            </div>
+            <div class="news__title">
+              Lorem Ipsum Dolor Sit Amet
+            </div>
+            <p class="news__txt">
+              Lorem ipsum dolor sit amet. The dummy text
+              show what a paragraph would look like.
+            </p>
+            <div class="news__img">
+              <img src="Apartment7.jpg" alt="news">
+            </div>
+          </a>
+        </div>
+        <div class="news-slider__item swiper-slide">
+          <a href="#" class="news__item">
+            <div class="news-date">
+              <span class="news-date__title">Rental</span>
+              <span class="news-date__txt">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </span>
+            </div>
+            <div class="news__title">
+              Lorem Ipsum Dolor Sit Amet
+            </div>
+            <p class="news__txt">
+              Lorem ipsum dolor sit amet. The dummy text
+              show what a paragraph would look like.
+            </p>
+            <div class="news__img">
+              <img src="Apartment5.jpg" alt="news">
+            </div>
+          </a>
+        </div>
+        <div class="news-slider__item swiper-slide">
+          <a href="#" class="news__item">
+            <div class="news-date">
+              <span class="news-date__title">Rental</span>
+              <span class="news-date__txt">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </span>
+            </div>
+            <div class="news__title">
+              Lorem Ipsum Dolor Sit Amet
+            </div>
+            <p class="news__txt">
+              Lorem ipsum dolor sit amet. The dummy text
+              show what a paragraph would look like.
+            </p>
+            <div class="news__img">
+              <img src="Apartment6.jpeg" alt="news">
+            </div>
+          </a>
+        </div>
+        <!-- Card code end -->
+      </div>
+      <div class="news-slider__ctr">
+        <div class="news-slider__arrows">
+          <button class="news-slider__arrow news-slider-prev" type="button" name="button">
+            <span class="icon-font">
+              <svg class="icon icon-arrow-left">
+                <use xlink:href="#icon-arrow-left" </use>
+              </svg>
+            </span>
+          </button>
+          <button class="news-slider__arrow news-slider-next">
+            <span class="icon-font">
+              <svg class="icon icon-arrow-right">
+                <use xlink:href="#icon-arrow-right" </use>
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="news-slider__pagination"></div>
+      </div>
+    </div>
+  </div>
+  <!-- svg start-->
+  <svg hidden="hidden">
+    <defs>
+      <symbol id="icon-arrow-left" viewBox="0 0 32 32">
+        <title>arrow-left</title>
+        <path
+          d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z">
+        </path>
+      </symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+        <title>arrow-right</title>
+        <path
+          d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z">
+        </path>
+      </symbol>
+    </defs>
+  </svg>
+  <!-- svg end -->
+
+  <div class="bottom-container">
+    <!--<a class="footer-link" href="https://twitter.com/">Twitter</a> -->
+    <hr>
+    <div class="bottom-div">
+      <a class="bottom-links" href="contact.html">
+        Contact</a>
+      <a class="bottom-links" href="about.html">
+        About</a>
+      <a class="bottom-links" href="terms.html">
+        Terms of Use</a>
+      <a class="bottom-links" href="policy.html">
+        Privacy Policy</a>
+    </div>
+    <p class="copyright">© 2021 <strong>ReviewBox.</strong></p>
+    <div class="attribution">
+      <a href="https://www.vecteezy.com/free-vector/apartment-building">Apartment Building Vectors by Vecteezy</a>
+      <a href="https://www.vecteezy.com/free-vector/abstract">Abstract Vectors by Vecteezy</a>
+      <a href="https://www.vecteezy.com/free-vector/cityscape">Cityscape Vectors by Vecteezy</a>
+      <a href="https://www.vecteezy.com/free-vector/city-map">City Map Vectors by Vecteezy</a>
+      <a href='https://www.freepik.com/photos/background'>Background photo created by evening_tao - www.freepik.com</a>
+    </div>
+  </div>
+  <!--Script for main page-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!--Script for carousel-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
