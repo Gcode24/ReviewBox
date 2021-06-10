@@ -11,8 +11,8 @@ a, a:hover {
 
 .wrapper {
   margin-bottom: 300px;
-  overflow-x: hidden; 
-  max-width: 100%;
+  overflow-x: hidden !important; 
+  max-width: 100% !important;
 }
 
 .icon {
