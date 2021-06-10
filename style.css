@@ -12,6 +12,7 @@ a, a:hover {
 
 .wrapper {
   margin-bottom: 300px;
+  overflow-x: hidden !important;
 }
 
 .icon {
